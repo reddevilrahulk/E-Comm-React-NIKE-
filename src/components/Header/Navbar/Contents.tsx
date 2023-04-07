@@ -84,7 +84,7 @@ function Contents() {
                 HOME
               </li>
             </Link>
-            <Link to={`/shop/Mens`} className='contents_links'>
+            <Link to={`/shop/Mens`} className='contents_links sdfasdfsdf'>
               <li className="two">
                 MENS
                 <div className='mega_menu'>
