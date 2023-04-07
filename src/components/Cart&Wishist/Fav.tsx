@@ -8,6 +8,9 @@ import { initializeApp } from "firebase/app";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
 
+import DeleteIcon from '@mui/icons-material/Delete';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const cartRef = database.ref('Cart');
@@ -60,8 +63,8 @@ const Fav =() => {
                                 </div>
                                 <p className='cart_type'>{product.type}</p>
                                 <div className="delete">
-                                    <button className="delete_btn btn" id={product.id} onClick={deletingProduct}>Delete</button>
-                                    <button className="aaddtocart_btn delete_btn btn" onClick={()=>addingTocart(product)}>Add To Cart</button>
+                                    <button className="delete_btn btn" id={product.id} onClick={deletingProduct}><DeleteIcon /></button>
+                                    <button className="aaddtocart_btn delete_btn btn" onClick={()=>addingTocart(product)}><AddShoppingCartIcon /></button>
                                 </div>
                             </div>
                         </div>
