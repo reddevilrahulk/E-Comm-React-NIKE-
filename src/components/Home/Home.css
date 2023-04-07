@@ -36,7 +36,8 @@
     margin: -5px 0 0 0 ;
     text-align: center;
     line-height: 40px;
-    letter-spacing: -5px !important;
+    letter-spacing: -2px !important;
+    padding: 10px;
 }
 
 button{
@@ -56,6 +57,9 @@ button:hover{
     align-items: center;
     justify-content: center;
     gap: 5px;
+}
+.buy{
+    margin-top: 25px;
 }
 
 .btn{
@@ -137,7 +141,9 @@ button:hover{
     }
     .home_image_description > p{
         padding-left: 15px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 5px;
     }
     .home_image_description {
         display: unset;
@@ -153,13 +159,15 @@ button:hover{
         margin-left: 10px;
         font-size: 12px;
     }
-
+    .notify{
+        margin-top: 5px;
+    }
     .slider_categories{
         flex-direction: column;
     }
 
     .mens_slider,.womens_slider{
-        width: 70%;
+        width: 95%;
     }
     .shopping_categories{
         flex-direction: column;

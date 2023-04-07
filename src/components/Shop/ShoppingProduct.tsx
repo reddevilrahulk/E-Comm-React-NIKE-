@@ -6,6 +6,7 @@ import { firebaseConfig } from '../firebase/index'
 import { useNavigate } from 'react-router-dom';
 import { FilterProvider } from './Shop'
 
+
 const app = initializeApp(firebaseConfig);
 
 function ShoppingProduct() {

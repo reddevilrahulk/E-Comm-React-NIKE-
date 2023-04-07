@@ -36,22 +36,7 @@
     align-items: start;
     justify-content: space-between;
 }
-.overlay_image{
-    position: absolute;
-    top: 150px;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    transition: top 200ms ease;
-}
 
-.card:hover > .card_image >.overlay_image{
-    cursor: pointer;
-    top: 0px;
-    background-color: rgba(0, 0, 0, 0.205);
-    transition: top 200ms ease;
-}
 
 @media (max-width: 600px){
     .card{

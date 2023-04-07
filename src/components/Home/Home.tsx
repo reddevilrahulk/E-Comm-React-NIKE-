@@ -13,8 +13,6 @@ const Home = () => {
       <div className='home_image_description'>
         <p>First Look</p>
         <h3>NIKE AIR MAX PULSE</h3>
-        <p>Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse</p>
-        <p className='p2'>—designed to push you past your limits and help you go to the max.</p>
         <div className='btns'>
           <button className="buy btn">Shop Air Max</button>
         </div>
@@ -38,14 +36,14 @@ const Home = () => {
       <div className='slider_categories'>
         <div className='mens_slider'>
           <CommonSlider 
-            slides={[1.6,1.6,1.4,1.1,1.1]}
+            slides={[1.6,1.6,1.4,1,1]}
             title="Mens"
             jsonName='TrendingMens'
             />
         </div>
         <div className='womens_slider'>
           <CommonSlider 
-            slides={[1.6,1.6,1.4,1.1,1.1]}
+            slides={[1.6,1.6,1.4,1,1]}
             title="Womens"
             jsonName='TrendingWomens'
             />

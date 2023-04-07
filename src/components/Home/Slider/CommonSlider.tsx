@@ -37,7 +37,7 @@ function CommonSlider({title,jsonName,slides}:any) {
         speed: 500,
         slidesToShow: slides[0],
         slidesToScroll: 1,
-        initialSlide: 1,
+        initialSlide: 0,
         nextArrow: <NavigateNextIcon />,
         prevArrow: <NavigateBeforeIcon />,
         responsive: [
@@ -47,7 +47,7 @@ function CommonSlider({title,jsonName,slides}:any) {
               slidesToShow: slides[1],
               slidesToScroll: 1,
               infinite: true,
-        initialSlide: 1,
+              initialSlide: 0,
 
             }
           },
@@ -57,7 +57,7 @@ function CommonSlider({title,jsonName,slides}:any) {
               slidesToShow: slides[2],
               slidesToScroll: 1,
               infinite: true,
-        initialSlide: 1,
+              initialSlide: 0,
 
             }
           },
@@ -67,7 +67,7 @@ function CommonSlider({title,jsonName,slides}:any) {
               slidesToShow: slides[3],
               slidesToScroll: 1,
               infinite: true,
-        initialSlide: 1,
+              initialSlide: 0,
 
             }
           },
@@ -76,7 +76,7 @@ function CommonSlider({title,jsonName,slides}:any) {
             settings: {
               slidesToShow: slides[4],
               slidesToScroll: 1,
-        initialSlide: 1,
+              initialSlide: 0,
 
             }
           }
@@ -96,7 +96,7 @@ function CommonSlider({title,jsonName,slides}:any) {
         </Link>
       </div>
       <Slider {...settings} className='trending_slider'>
-      {data && data.map( product =>(
+      {data && data.length > 0 && data.map( product =>(
         <div onClick={()=> productCardhandler(product)}>
         <CommonCard 
             title={product.title}

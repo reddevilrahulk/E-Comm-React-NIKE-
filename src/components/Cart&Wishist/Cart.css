@@ -10,7 +10,9 @@
     width: 60%;
     height: auto;
 }
-
+.cart_image_empty{
+    height: 300px;
+}
 .summary{
     width: 40%;
     height: auto;

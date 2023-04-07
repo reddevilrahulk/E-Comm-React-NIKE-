@@ -7,7 +7,6 @@ const CommonCard = ({title,price,mainCategory,images}:any) => {
         <div  >
             <div className='card'>
               <div className='card_image'>
-              <div className="overlay_image"></div>
                 <img src={images[0]} alt='' className="imagesss"/>
               </div>
               <div className='card_content'>

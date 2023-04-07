@@ -9,6 +9,8 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import CommonSlider from '../Home/Slider/CommonSlider';
 import { firebaseConfig } from '../firebase';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
@@ -71,13 +73,13 @@ const ProductDetails =()=>{
                     quantity: 1,
                     size: sizeSelect,
                 }
-                alert("Added Succesfully");
+                alert('Added Successfully')
                 cartRef.child(product.id).set(newProduct)
             }else{
                 alert('Select Proper Size')
             }
         }else{
-            alert('Please Log in before adding to cart')
+            alert('Please Login before Adding to Cart')
             navigate('/login')
         }
     }
@@ -89,25 +91,27 @@ const ProductDetails =()=>{
                     size: sizeSelect,
                     quantity: 1,
                 }
-                alert("Added Succesfully");
+                alert('Added Successfully')
                 cartRef2.child(product.id).set(newProduct)
             }else{
                 alert('Select Proper Size')
             }
         }else{
-            alert('Please Log in before adding to cart')
-            window.location.href='/login'
+            alert('Please Login before Adding to Cart')
+            navigate('/login')
         }
     }
     return(
         <>
+        <ToastContainer/>
+
         <div className='prdt_details'>
             <div className='prdt_swiper'>
                 <Swiper
                     loop={true}
                     spaceBetween={10}
                     navigation={true}
-                    thumbs={thumbsSwiper && { swiper: thumbsSwiper }}
+                    thumbs={{ swiper: thumbsSwiper }}
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="mySwiper2"
                 >
@@ -118,14 +122,14 @@ const ProductDetails =()=>{
                     ))}
                 </Swiper>
                 <Swiper
-                onSwiper={setThumbsSwiper}
-                    loop={true}
-                    spaceBetween={10}
-                    slidesPerView={5}
-                    freeMode={true}
-                    watchSlidesProgress={true}
-                    modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper"
+                //    onSwiper={setThumbsSwiper}
+                   loop={true}
+                   spaceBetween={10}
+                   slidesPerView={5}
+                   freeMode={true}
+                   watchSlidesProgress={true}
+                   modules={[FreeMode, Navigation, Thumbs]}
+                   className="mySwiper"
                 >
                     {cardData && cardData.images && cardData.images.map((image,index)=>(
                         <SwiperSlide className='small_slide' key={index}>

@@ -118,7 +118,9 @@ function Cart(){
                                  </div>
                              </div>
                          </div>
-            )): <div>Empty ARray</div>}
+            )): <><div>Your BAG is Empty</div>
+                <img src="https://www.esgreen.com/images/page_img/empty-shopping-cart-002_2x.png" alt="" className='cart_image_empty' /></>
+            }
                      </div>
                  </div>
             <div className='summary'>
